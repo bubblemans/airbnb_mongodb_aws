@@ -6,8 +6,10 @@ airbnb_mongodb_aws is a simple application that supports Airbnb housing manageme
 2. Demonstrate end-to-end connection from application to the MongoDB cluster
 
 # Set up and configure AWS
-The specific instructions can be found [here](https://www.notion.so/A-sharded-cluster-with-replica-sets-on-AWS-EC2-1d03f21215c249ba9354710160fa6093). And after setting up, the cluster will look like:
-<img width="623" alt="Screen Shot 2021-05-07 at 5 41 04 PM" src="https://user-images.githubusercontent.com/23702266/117431089-6701fb80-af5b-11eb-91c2-1327d95f2f80.png">
+The specific instructions can be found [here](https://www.notion.so/A-sharded-cluster-with-replica-sets-on-AWS-EC2-1d03f21215c249ba9354710160fa6093). The cluster consists of three nodes (EC2 instance), and each node has one config server and three different shard replicas. One of the node has mongos that connect three config servers across three nodes.
+And after setting up, the cluster will look like:
+
+<img width="723" alt="Screen Shot 2021-05-07 at 5 41 04 PM" src="https://user-images.githubusercontent.com/23702266/117431089-6701fb80-af5b-11eb-91c2-1327d95f2f80.png">
 
 # Dataset
 You can retrieve the dataset using the public Airbnb data from [here](http://insideairbnb.com/get-the-data.html). We only use the most recent 45-month data in San Francisco that contains house information and reviews, and the total size is 2.21GB.
